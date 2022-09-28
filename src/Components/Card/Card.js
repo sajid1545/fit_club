@@ -6,9 +6,9 @@ const Card = ({ exercise,handleAddToList }) => {
 
 	return (
 		<div>
-			<div className="card card-compact  bg-base-100 shadow-xl">
-				<figure >
-					<img className='w-full  h-full p-4' src={picture} alt="pic" />
+			<div className="card card-compact  bg-base-100 shadow-xl hover:scale-105 duration-700 hover:shadow-stone-800">
+				<figure>
+					<img className='p-4 ' src={picture} alt="pic" />
 				</figure>
 				<div className="card-body">
                     <h2 className="card-title text-2xl">{ title }</h2>

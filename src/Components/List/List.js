@@ -1,6 +1,8 @@
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
 import { addToDb, getStoredTime } from '../../Utilities/localStorage';
 
 const List = ({ list }) => {
@@ -14,6 +16,19 @@ const List = ({ list }) => {
 	const handleBreakTime = (value) => {
 		setBreak(value);
 		addToDb(value);
+	};
+
+	const handleActivityCompleted = () => {
+		toast('🦄 Activity Completed!', {
+			position: 'top-right',
+			autoClose: 3000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		});
+		Swal.fire('Congratulations 🎉🎉🎊🎊', 'You are done for the Day 💪💪', 'success');
 	};
 
 	let seletedTime = 0;
@@ -66,16 +81,24 @@ const List = ({ list }) => {
 				</div>
 
 				<div className="text-center space-x-5 rounded-lg bg-slate-100 p-4 ">
-					<button onClick={() => handleBreakTime(20)} className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
+					<button
+						onClick={() => handleBreakTime(20)}
+						className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
 						<p className="lowercase">20s</p>
 					</button>
-					<button onClick={() => handleBreakTime(30)} className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
+					<button
+						onClick={() => handleBreakTime(30)}
+						className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
 						<p className="lowercase">30s</p>
 					</button>
-					<button onClick={() => handleBreakTime(40)} className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
+					<button
+						onClick={() => handleBreakTime(40)}
+						className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
 						<p className="lowercase">40s</p>
 					</button>
-					<button onClick={() => handleBreakTime(50)} className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
+					<button
+						onClick={() => handleBreakTime(50)}
+						className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
 						<p className="lowercase">50s</p>
 					</button>
 				</div>
@@ -89,20 +112,29 @@ const List = ({ list }) => {
 				</div>
 
 				<div className="flex justify-between p-4 bg-slate-100 mt-3 rounded-lg">
-					<h2 className='text-xl font-semibold'>Exercise Time</h2>
-					<p> <span className='text-green-700 font-extrabold text-lg'>{seletedTime}</span>  seconds</p>
+					<h2 className="text-xl font-semibold">Exercise Time</h2>
+					<p>
+						<span className="text-green-700 font-extrabold text-lg">{seletedTime}</span> seconds
+					</p>
 				</div>
 
 				<div className="flex justify-between p-4 bg-slate-100 mt-3 rounded-lg">
-					<h2 className='text-xl font-semibold'>Break Time</h2>
-					<p> <span className='text-green-700 font-extrabold text-lg'> {addbreak} </span> seconds</p>
+					<h2 className="text-xl font-semibold">Break Time</h2>
+					<p>
+						<span className="text-green-700 font-extrabold text-lg"> {addbreak} </span> seconds
+					</p>
 				</div>
 			</div>
 
-
 			{/* Activity completed btn */}
-			
 
+			<div className="mt-10">
+				<button
+					onClick={handleActivityCompleted}
+					className="btn btn-wide btn-primary focus:bg-red-600">
+					Activity Completed
+				</button>
+			</div>
 		</div>
 	);
 };
