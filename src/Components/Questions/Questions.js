@@ -6,7 +6,7 @@ const Questions = () => {
 			<h1 className="text-4xl font-bold">About React </h1>
 
 			{/* First Question */}
-			<div className="w-4/5 mx-auto border-4 border-purple-600 mt-5 rounded-xl shadow-lg hover:shadow-purple-400 duration-500 md:hover:scale-110">
+			<div title='Click to See the anwers' className="w-4/5 mx-auto border-4 border-purple-600 mt-5 rounded-xl shadow-lg hover:shadow-purple-400 duration-500 md:hover:scale-110">
 				<div className="collapse">
 					<input type="checkbox" />
 					<div className="collapse-title text-xl font-semibold underline-offset-8 underline">
@@ -31,7 +31,7 @@ const Questions = () => {
 			</div>
 
 			{/* Second Question */}
-			<div className="w-4/5 mx-auto border-4 border-purple-600 mt-5 rounded-xl shadow-lg hover:shadow-purple-400 duration-500 md:hover:scale-110">
+			<div title='Click to See the anwers' className="w-4/5 mx-auto border-4 border-purple-600 mt-5 rounded-xl shadow-lg hover:shadow-purple-400 duration-500 md:hover:scale-110">
 				<div className="collapse">
 					<input type="checkbox" />
 					<div className="collapse-title text-xl font-semibold underline-offset-8 underline">
@@ -54,7 +54,7 @@ const Questions = () => {
 			</div>
 
 			{/* Third Question */}
-			<div className="w-4/5 mx-auto border-4 border-purple-600 mt-5 rounded-xl shadow-lg hover:shadow-purple-400 duration-500 md:hover:scale-110">
+			<div title='Click to See the anwers' className="w-4/5 mx-auto border-4 border-purple-600 mt-5 rounded-xl shadow-lg hover:shadow-purple-400 duration-500 md:hover:scale-110">
 				<div className="collapse">
 					<input type="checkbox" />
 					<div className="collapse-title text-xl font-semibold underline-offset-8 underline">
