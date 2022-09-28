@@ -9,6 +9,8 @@ const getStoredTime = () => {
     const storedTime = localStorage.getItem('break-time')
     if (storedTime) {
         breakTime = JSON.parse(storedTime)
+    } else {
+        breakTime = 0;
     }
     return breakTime;
 }

@@ -22,7 +22,7 @@ const Home = () => {
 	return (
 		<div className=" grid grid-cols-12">
 			{/* cards container */}
-			<div className=" col-span-12 lg:col-span-9 p-10 sm:px-[80px] sm:py-[70px]">
+			<div className=" col-span-12 lg:col-span-9 p-10 px-[80px] py-[70px] bg-slate-50">
 				<div className="text-4xl text-purple-700 flex gap-5 flex-col text-center sm:text-left sm:flex-row ">
 					<FontAwesomeIcon className="font-extrabold" icon={faDumbbell}></FontAwesomeIcon>
 					<h1 className="font-bold">My FitnessPal</h1>
@@ -43,7 +43,7 @@ const Home = () => {
 
 			{/* list container */}
 
-			<div className="col-span-12 md:text-center md:mx-auto md:block  lg:col-span-3 bg-slate-300 py-10 px-5 ">
+			<div className="col-span-12 md:text-center md:mx-auto md:block  lg:col-span-3 bg-orange-100 py-10 px-5 ">
 				<List list={list}></List>
 			</div>
 		</div>

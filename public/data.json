@@ -3,20 +3,23 @@
 		"id": "633453c4f999f0a9896da6c0",
 		"title": "Dumbel",
 		"time": 100,
+		"about": "Dumbbell training can be a valuable part of any lifter's journey. They can help you add muscle mass, increase coordination, correct muscle imbalances, and even help you gain strength.",
 		"picture": "https://img.freepik.com/free-photo/big-dumbbells-white_144627-24201.jpg?w=996&t=st=1664389683~exp=1664390283~hmac=249b31448c8b1570282a21a55daabe672bcea703ed53a4b0a370683dc8d85ed9",
-		"age": "20-40"
+		"age": "20-50"
 	},
 	{
 		"id": "633453c446651376730e11e0",
 		"title": "Stretching and flexibility",
 		"time": 30,
+		"about": "Stretching is an important part of any exercise program. Most aerobic and strength training programs involve tightening and contraction of your muscles. Stretching after you exercise helps your joints move through their full range of motion and boosts muscle blood flow.",
 		"picture": "https://img.freepik.com/free-photo/full-shot-woman-stretching-mat_23-2149698145.jpg?w=996&t=st=1664389728~exp=1664390328~hmac=30be9097b58a010f4f8516c13a8e1049c164cb95a1471f0a0728c37ca7e65d4e",
-		"age": "20-40"
+		"age": "20-55"
 	},
 	{
 		"id": "633453c483fcd9efb826221b",
 		"title": "Lunges",
 		"time": 35,
+		"about": "Lunges are a popular strength training exercise among people wanting to strengthen, sculpt, and tone their bodies, while also improving overall fitness and enhancing athletic performance.",
 		"picture": "https://img.freepik.com/free-photo/young-fitness-couple-sportswear-doing-lunges-modern-city-against-skyscraper-healthy-lifestyle-concept_613910-18392.jpg?w=996&t=st=1664389802~exp=1664390402~hmac=f8ec473c91321ffe43b8d3edbeaa03fb0740788e070a67f5fa5e67afa05863c1",
 		"age": "20-30"
 	},
@@ -24,6 +27,7 @@
 		"id": "633453c4e7d7b5151564d25e",
 		"title": "Pushups",
 		"time": 40,
+		"about": "When you combine push-ups and additional upper-body exercises, you can increase the size of your arms and increase your overall pressing strength.",
 		"picture": "https://img.freepik.com/free-photo/concentrated-male-friends-working-out-sunny-day-two-men-sportive-clothes-open-air-sports-ground-sport-health-hobby-concept_74855-24384.jpg?w=996&t=st=1664389927~exp=1664390527~hmac=fd1efe8e3931d699263cd726651cc35e18771acd6974df7657a6c9f5379ff7aa",
 		"age": "20-45"
 	},
@@ -31,14 +35,16 @@
 		"id": "633453c4efa421709dcc1372",
 		"title": "Squats",
 		"time": 60,
+		"about": "Squats burn calories and might help you lose weight. They also lower your chances of injuring your knees and ankles. As you exercise, the movement strengthens your tendons, bones, and ligaments around the leg muscles. It takes some of the weight off your knees and ankles.",
 		"picture": "https://img.freepik.com/free-photo/sportsman-doing-plie-squats-with-weights_651396-1591.jpg?w=996&t=st=1664390030~exp=1664390630~hmac=efc64024c80437bd91b41decad2c615850957363c0639eb3cd72d2d59df170af",
-		"age": "20-50"
+		"age": "20-40"
 	},
 	{
 		"id": "633453c44f5f6da10cc78df6",
-		"title": "Side planks.",
+		"title": "Side planks",
 		"time": 90,
+		"about": "Side planks work the deep spinal stabilizing muscle quadratus lumborum . Keeping this muscle strong can help reduce your risk of a back injury. Strengthens your core without stressing your back.",
 		"picture": "https://img.freepik.com/free-photo/shirtless-bodybuilder-doing-side-plank-exercise_7502-4749.jpg?w=996&t=st=1664390175~exp=1664390775~hmac=14575a99873830ef5ad62ece8f34f867b85158ceb8ad830ba0009548f5126947",
-		"age": "20-40"
+		"age": "27-40"
 	}
 ]

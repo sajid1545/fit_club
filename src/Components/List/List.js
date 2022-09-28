@@ -1,4 +1,4 @@
-import { faLocation } from '@fortawesome/free-solid-svg-icons';
+import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -19,7 +19,7 @@ const List = ({ list }) => {
 	};
 
 	const handleActivityCompleted = () => {
-		toast('🦄 Activity Completed!', {
+		toast('🎉🎉 Activity Completed!', {
 			position: 'top-right',
 			autoClose: 3000,
 			hideProgressBar: false,
@@ -41,9 +41,9 @@ const List = ({ list }) => {
 			{/* Persona details */}
 			<div className="flex gap-4">
 				<div className="avatar">
-					<div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+					<div className="w-12 rounded-full ring ring-green-700 ring-offset-base-100 ring-offset-2">
 						<img
-							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeuBfEFCjbdnfEYIE_BVX33Y07b5xhOoldDg&usqp=CAU"
+							src="https://scontent-ccu1-1.xx.fbcdn.net/v/t39.30808-1/293183277_3836516853239197_503555443141820798_n.jpg?stp=cp6_dst-jpg_p240x240&_nc_cat=101&ccb=1-7&_nc_sid=7206a8&_nc_ohc=lcLeyggH6CwAX9uOzkv&_nc_ht=scontent-ccu1-1.xx&oh=00_AT_ECJk65XW3IdA5SW-EaQVv45c-7c_Tjwtl4I9MeStiTw&oe=6339C119"
 							alt="avatar"
 						/>
 					</div>
@@ -52,7 +52,7 @@ const List = ({ list }) => {
 				<div>
 					<h3 className="font-bold text-xl">Sajid Abdullah</h3>
 					<div className="flex items-center gap-2">
-						<FontAwesomeIcon icon={faLocation}></FontAwesomeIcon>
+						<FontAwesomeIcon icon={faMapLocationDot}></FontAwesomeIcon>
 						<h3>Bangladesh, Chattogram</h3>
 					</div>
 				</div>
@@ -98,7 +98,7 @@ const List = ({ list }) => {
 					</button>
 					<button
 						onClick={() => handleBreakTime(50)}
-						className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
+						className="btn btn-circle btn-outline duration-300 focus:bg-purple-700 focus:text-white">
 						<p className="lowercase">50s</p>
 					</button>
 				</div>
@@ -131,7 +131,7 @@ const List = ({ list }) => {
 			<div className="mt-10">
 				<button
 					onClick={handleActivityCompleted}
-					className="btn btn-wide btn-primary focus:bg-red-600">
+					className="btn btn-wide btn-primary focus:bg-red-600 block mx-auto">
 					Activity Completed
 				</button>
 			</div>

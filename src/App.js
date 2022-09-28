@@ -7,7 +7,7 @@ import Questions from './Components/Questions/Questions';
 
 function App() {
   return (
-    <div className='bg-slate-50'>
+    <div>
       <Activities></Activities>
       <ToastContainer></ToastContainer>
       <Questions></Questions>
