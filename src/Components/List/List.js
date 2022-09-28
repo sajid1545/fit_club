@@ -1,13 +1,22 @@
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { addToDb, getStoredTime } from '../../Utilities/localStorage';
 
 const List = ({list}) => {
 
-	const [addbreak, setBreak] = useState(20)
+	const [addbreak, setBreak] = useState(0)
+
+	useEffect(() => {
+		const storedTime = getStoredTime()
+			setBreak(storedTime)
+	},[])
+
+
 
 	const handleBreakTime = (value) => {
 		setBreak(value)
+		addToDb(value)
 	}
 
 
@@ -62,16 +71,16 @@ const List = ({list}) => {
 
 				<div className="text-center space-x-5 rounded-lg bg-slate-100 p-4">
 					<button onClick={()=>handleBreakTime(20)}  className="btn btn-circle btn-outline">
-						<p>20s</p>
+						<p className='lowercase'>20s</p>
 					</button>
 					<button onClick={()=>handleBreakTime(30)} className="btn btn-circle btn-outline">
-						<p>30s</p>
+						<p className='lowercase'>30s</p>
 					</button>
 					<button onClick={()=>handleBreakTime(40)} className="btn btn-circle btn-outline">
-						<p>40s</p>
+						<p className='lowercase'>40s</p>
 					</button>
 					<button onClick={()=>handleBreakTime(50)} className="btn btn-circle btn-outline">
-						<p>50s</p>
+						<p className='lowercase'>50s</p>
 					</button>
 				</div>
 			</div>
