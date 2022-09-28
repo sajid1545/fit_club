@@ -14,14 +14,14 @@ const Card = ({ exercise, handleAddToList }) => {
 	}
 
 	return (
-		<div>
-			<div className="card card-compact  bg-base-100 shadow-xl hover:scale-105 duration-700 hover:shadow-stone-800">
+		<div  className=''>
+			<div className="card card-compact  bg-orange-200  shadow-xl hover:scale-105 duration-700 hover:shadow-stone-800">
 				<figure className="p-4">
 					<img className="rounded-xl " src={picture} alt="pic" />
 				</figure>
 				<div className="card-body">
-					<h2 className="card-title text-2xl">{title}</h2>
-					<p className="text-gray-500">
+					<h2 className="card-title text-2xl font-mono">{title}</h2>
+					<p className="text-gray-700">
 						{about.length > 100 ? about.slice(0, 85) + '... '  : about}
 						<span className='cursor-pointer text-blue-700 font-bold hover:text-red-600'  onClick={handleReadMore}>Read More</span>
 					</p>

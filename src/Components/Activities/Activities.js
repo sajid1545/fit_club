@@ -30,7 +30,7 @@ const Home = () => {
 
 				<div>
 					<h1 className="text-2xl mt-10 font-semibold text-center sm:text-left">
-						Start Today's Exercise
+						Start Working Towards your Goal
 					</h1>
 				</div>
 
