@@ -15,34 +15,36 @@ const Home = () => {
 	}, []);
 
 	const handleAddToList = (selectedExercise) => {
-        const newList = [...list, selectedExercise];
-        setList(newList);
+		const newList = [...list, selectedExercise];
+		setList(newList);
 	};
 
 	return (
 		<div className=" grid grid-cols-12">
 			{/* cards container */}
-			<div className="col-span-9 px-[80px] py-[70px]">
-				<div className="text-4xl text-purple-700 flex gap-5 ">
+			<div className=" col-span-12 lg:col-span-9 p-10 sm:px-[80px] sm:py-[70px]">
+				<div className="text-4xl text-purple-700 flex gap-5 flex-col text-center sm:text-left sm:flex-row ">
 					<FontAwesomeIcon className="font-extrabold" icon={faDumbbell}></FontAwesomeIcon>
 					<h1 className="font-bold">My FitnessPal</h1>
 				</div>
 
 				<div>
-					<h1 className="text-2xl mt-10 font-semibold">Start Today's Exercise</h1>
+					<h1 className="text-2xl mt-10 font-semibold text-center sm:text-left">
+						Start Today's Exercise
+					</h1>
 				</div>
 
-				<div className="grid grid-cols-3 gap-5 mt-5">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
 					{exercises.map((exercise) => (
-                        <Card key={exercise.id} exercise={exercise} handleAddToList={handleAddToList} list={ list }></Card>
+						<Card key={exercise.id} exercise={exercise} handleAddToList={handleAddToList}></Card>
 					))}
 				</div>
 			</div>
 
 			{/* list container */}
 
-			<div className="col-span-3 bg-white py-10 px-5">
-                <List list={ list }></List>
+			<div className="  col-span-12 md:text-center md:mx-auto md:block  lg:col-span-3 bg-white py-10 px-5 ">
+				<List list={list}></List>
 			</div>
 		</div>
 	);

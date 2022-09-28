@@ -3,30 +3,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { addToDb, getStoredTime } from '../../Utilities/localStorage';
 
-const List = ({list}) => {
-
-	const [addbreak, setBreak] = useState(0)
+const List = ({ list }) => {
+	const [addbreak, setBreak] = useState(0);
 
 	useEffect(() => {
-		const storedTime = getStoredTime()
-			setBreak(storedTime)
-	},[])
-
-
+		const storedTime = getStoredTime();
+		setBreak(storedTime);
+	}, []);
 
 	const handleBreakTime = (value) => {
-		setBreak(value)
-		addToDb(value)
+		setBreak(value);
+		addToDb(value);
+	};
+
+	let seletedTime = 0;
+	for (const time of list) {
+		seletedTime += time.time;
 	}
-
-
-	
-	
-    let seletedTime = 0
-    for (const time of list) {
-        seletedTime += time.time
-    }
-
 
 	return (
 		<div>
@@ -34,7 +27,10 @@ const List = ({list}) => {
 			<div className="flex gap-4">
 				<div className="avatar">
 					<div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-						<img src="https://placeimg.com/192/192/people" alt="avatar" />
+						<img
+							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeuBfEFCjbdnfEYIE_BVX33Y07b5xhOoldDg&usqp=CAU"
+							alt="avatar"
+						/>
 					</div>
 				</div>
 
@@ -54,7 +50,7 @@ const List = ({list}) => {
 				</div>
 				<div>
 					<h1 className="text-2xl font-bold">5.8</h1>
-					<h4 className="text-lg text-gray-700 font-semibold">Heigth</h4>
+					<h4 className="text-lg text-gray-700 font-semibold">Height</h4>
 				</div>
 				<div>
 					<h1 className="text-2xl font-bold">22yrs</h1>
@@ -69,39 +65,44 @@ const List = ({list}) => {
 					<h2 className="text-2xl font-semibold">Add a Break</h2>
 				</div>
 
-				<div className="text-center space-x-5 rounded-lg bg-slate-100 p-4">
-					<button onClick={()=>handleBreakTime(20)}  className="btn btn-circle btn-outline">
-						<p className='lowercase'>20s</p>
+				<div className="text-center space-x-5 rounded-lg bg-slate-100 p-4 ">
+					<button onClick={() => handleBreakTime(20)} className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
+						<p className="lowercase">20s</p>
 					</button>
-					<button onClick={()=>handleBreakTime(30)} className="btn btn-circle btn-outline">
-						<p className='lowercase'>30s</p>
+					<button onClick={() => handleBreakTime(30)} className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
+						<p className="lowercase">30s</p>
 					</button>
-					<button onClick={()=>handleBreakTime(40)} className="btn btn-circle btn-outline">
-						<p className='lowercase'>40s</p>
+					<button onClick={() => handleBreakTime(40)} className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
+						<p className="lowercase">40s</p>
 					</button>
-					<button onClick={()=>handleBreakTime(50)} className="btn btn-circle btn-outline">
-						<p className='lowercase'>50s</p>
+					<button onClick={() => handleBreakTime(50)} className="btn btn-circle btn-outline focus:bg-purple-700 focus:text-white">
+						<p className="lowercase">50s</p>
 					</button>
 				</div>
 			</div>
 
 			{/* Exercise Details */}
 
-			<div className='mt-10'>
+			<div className="mt-10">
 				<div>
 					<h2 className="text-2xl font-semibold">Exercise Details</h2>
-                </div>
-                
-                <div className='flex justify-between p-4 bg-slate-200 mt-3'>
-                    <h2>Exercise Time</h2>
-					<p>{ seletedTime } seconds</p>
-                </div>
+				</div>
 
-                <div className='flex justify-between p-4 bg-slate-200 mt-3'>
-					<h2>Break Time</h2>
-                    <p>{ addbreak } seconds</p>
-                </div>
+				<div className="flex justify-between p-4 bg-slate-100 mt-3 rounded-lg">
+					<h2 className='text-xl font-semibold'>Exercise Time</h2>
+					<p> <span className='text-green-700 font-extrabold text-lg'>{seletedTime}</span>  seconds</p>
+				</div>
+
+				<div className="flex justify-between p-4 bg-slate-100 mt-3 rounded-lg">
+					<h2 className='text-xl font-semibold'>Break Time</h2>
+					<p> <span className='text-green-700 font-extrabold text-lg'> {addbreak} </span> seconds</p>
+				</div>
 			</div>
+
+
+			{/* Activity completed btn */}
+			
+
 		</div>
 	);
 };
