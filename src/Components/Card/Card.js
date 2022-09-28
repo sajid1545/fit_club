@@ -6,8 +6,9 @@ const Card = ({ exercise, handleAddToList }) => {
 
 	const handleReadMore = ()=>{
 		Swal.fire({
-			
+			imageUrl: picture,
 			text: about,
+			title: title,
 			
 		  })
 	}
