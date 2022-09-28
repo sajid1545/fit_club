@@ -8,7 +8,7 @@ const Card = ({ exercise,handleAddToList }) => {
 		<div>
 			<div className="card card-compact  bg-base-100 shadow-xl">
 				<figure >
-					<img className='w-full h-[80%] p-4' src={picture} alt="pic" />
+					<img className='w-full  h-full p-4' src={picture} alt="pic" />
 				</figure>
 				<div className="card-body">
                     <h2 className="card-title text-2xl">{ title }</h2>
