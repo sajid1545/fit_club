@@ -1,14 +1,16 @@
 import './App.css';
-import Home from './Components/Home/Home';
+import Activities from './Components/Activities/Activities';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import Questions from './Components/Questions/Questions';
 
 
 function App() {
   return (
     <div className='bg-slate-50'>
-      <Home></Home>
+      <Activities></Activities>
       <ToastContainer></ToastContainer>
+      <Questions></Questions>
     </div>
   );
 }

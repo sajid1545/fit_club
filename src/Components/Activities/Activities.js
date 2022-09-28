@@ -43,7 +43,7 @@ const Home = () => {
 
 			{/* list container */}
 
-			<div className="  col-span-12 md:text-center md:mx-auto md:block  lg:col-span-3 bg-white py-10 px-5 ">
+			<div className="col-span-12 md:text-center md:mx-auto md:block  lg:col-span-3 bg-slate-300 py-10 px-5 ">
 				<List list={list}></List>
 			</div>
 		</div>

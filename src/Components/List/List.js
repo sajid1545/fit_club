@@ -32,8 +32,8 @@ const List = ({ list }) => {
 	};
 
 	let seletedTime = 0;
-	for (const time of list) {
-		seletedTime += time.time;
+	for (const info of list) {
+		seletedTime += info.time;
 	}
 
 	return (
