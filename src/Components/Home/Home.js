@@ -1,9 +1,21 @@
-import { faDumbbell, faLocation } from '@fortawesome/free-solid-svg-icons';
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Card from '../Card/Card';
 import List from '../List/List';
 
 const Home = () => {
+
+    const [exercises,setExercises] = useState([])
+
+    useEffect(() => { 
+        fetch('data.json')
+            .then(res => res.json())
+        .then(data => setExercises(data))
+     }, [])
+
+
+
 	return (
         <div className=" grid grid-cols-12">
             
@@ -16,7 +28,10 @@ const Home = () => {
 
 				<div>
 					<h1 className="text-2xl mt-10 font-semibold">Start Today's Exercise</h1>
-				</div>
+                </div>
+                {
+                    exercises.map(exercise => <Card key={exercise.id} exercise={ exercise }></Card>)
+                }
 			</div>
 
 			{/* list container */}
