@@ -6,12 +6,18 @@ import List from '../List/List';
 
 const Home = () => {
 	const [exercises, setExercises] = useState([]);
+	const [list, setList] = useState([]);
 
 	useEffect(() => {
 		fetch('data.json')
 			.then((res) => res.json())
 			.then((data) => setExercises(data));
 	}, []);
+
+	const handleAddToList = (selectedExercise) => {
+        const newList = [...list, selectedExercise];
+        setList(newList);
+	};
 
 	return (
 		<div className=" grid grid-cols-12">
@@ -26,9 +32,9 @@ const Home = () => {
 					<h1 className="text-2xl mt-10 font-semibold">Start Today's Exercise</h1>
 				</div>
 
-				<div className='grid grid-cols-3 gap-5 mt-5'>
+				<div className="grid grid-cols-3 gap-5 mt-5">
 					{exercises.map((exercise) => (
-						<Card key={exercise.id} exercise={exercise}></Card>
+                        <Card key={exercise.id} exercise={exercise} handleAddToList={handleAddToList} list={ list }></Card>
 					))}
 				</div>
 			</div>
@@ -36,7 +42,7 @@ const Home = () => {
 			{/* list container */}
 
 			<div className="col-span-3 bg-white py-10 px-5">
-				<List></List>
+                <List list={ list }></List>
 			</div>
 		</div>
 	);

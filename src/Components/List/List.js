@@ -2,7 +2,15 @@ import React from 'react';
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const List = () => {
+const List = ({list}) => {
+
+	
+    let seletedTime = 0
+    for (const time of list) {
+        seletedTime += time.time
+    }
+
+
 	return (
 		<div>
 			{/* Persona details */}
@@ -69,7 +77,7 @@ const List = () => {
                 
                 <div className='flex justify-between p-4 bg-slate-200 mt-3'>
                     <h2>Exercise Time</h2>
-                    <p>seconds</p>
+					<p>{ seletedTime } seconds</p>
                 </div>
 
                 <div className='flex justify-between p-4 bg-slate-200 mt-3'>
