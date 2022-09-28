@@ -1,9 +1,17 @@
-import React from 'react';
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
 
 const List = ({list}) => {
 
+	const [addbreak, setBreak] = useState(20)
+
+	const handleBreakTime = (value) => {
+		setBreak(value)
+	}
+
+
+	
 	
     let seletedTime = 0
     for (const time of list) {
@@ -53,16 +61,16 @@ const List = ({list}) => {
 				</div>
 
 				<div className="text-center space-x-5 rounded-lg bg-slate-100 p-4">
-					<button className="btn btn-circle btn-outline">
+					<button onClick={()=>handleBreakTime(20)}  className="btn btn-circle btn-outline">
 						<p>20s</p>
 					</button>
-					<button className="btn btn-circle btn-outline">
+					<button onClick={()=>handleBreakTime(30)} className="btn btn-circle btn-outline">
 						<p>30s</p>
 					</button>
-					<button className="btn btn-circle btn-outline">
+					<button onClick={()=>handleBreakTime(40)} className="btn btn-circle btn-outline">
 						<p>40s</p>
 					</button>
-					<button className="btn btn-circle btn-outline">
+					<button onClick={()=>handleBreakTime(50)} className="btn btn-circle btn-outline">
 						<p>50s</p>
 					</button>
 				</div>
@@ -81,8 +89,8 @@ const List = ({list}) => {
                 </div>
 
                 <div className='flex justify-between p-4 bg-slate-200 mt-3'>
-                    <h2>Break Time</h2>
-                    <p>seconds</p>
+					<h2>Break Time</h2>
+                    <p>{ addbreak } seconds</p>
                 </div>
 			</div>
 		</div>
